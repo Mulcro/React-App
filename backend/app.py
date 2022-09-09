@@ -43,7 +43,9 @@ def createApi():
         except:
             abort(404)
         
-        return formattedBlog
+        return jsonify({
+            "blogs": formattedBlog
+        })
 
     @app.route('/blogs', methods=['POST'])
     def createBlog():
@@ -60,7 +62,9 @@ def createApi():
             blogs = Blog.query.all()
             formattedBlogs = [blog.format() for blog in blogs]
             
-            return formattedBlogs
+            return jsonify({
+                "blogs": formattedBlogs
+            })
         except:
             abort(422)
         
@@ -74,7 +78,9 @@ def createApi():
             blogs = Blog.query.all()
             formattedBlogs = [blog.format() for blog in blogs]
 
-            return formattedBlogs
+            return jsonify({
+                "blogs": formattedBlogs
+            })
         except:
             abort(422)
 

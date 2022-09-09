@@ -1,13 +1,181 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
+
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  flex-direction: column; 
+  width: 65%;
+  margin: auto;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* navbar */
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(174, 173, 173);
+}
+.navTitle{
+  color: white;
+}
+.title{
+  background-color: rgb(223, 94, 94);
+  color: azure;
+  border-radius: 20px;
+  padding: 12px 13px 12px 12px;
+  font-size: 0.8rem ;
+  width: 25%;
+  text-align: center;
+}
+.title:hover{
+  background-color:rgb(222, 115, 115);
+}
+.links{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.links a{
+  padding-left: 20px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.links a:hover{
+  color: rgb(223, 94, 94);
+  font-size: 1.1rem;
+}
+/*Loading screen*/
+/* .msg{
+  text-align: center;
+  margin-top: 30%;
+} */
+.pending{
+  position: absolute;
+  left:50%;
+  top: 55%;
+}
+.spin{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: solid 5px rgb(238, 45, 45);
+  border-bottom-color: black ;
+  animation: spinner 1.5s linear none infinite;
+  transform: translate3d(-50%, -50%, 0);
+}
+@keyframes spinner {
+  0% {
+    transform: translate3d(-50%, -50%, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(-50%, -50%, 0) rotate(360deg);
+  }
+}
+
+/* error */
+.error{
+  margin: 10% 5%;
+  font-weight: bold;
+}
+/*home*/
+.homepage h2{
+  font-size: 2.5rem;
+  padding-top: 30px;
+}
+.redWord{
+  color: rgb(223, 94, 94);
+}
+
+/*Blog preview*/
+a{
+  text-decoration: none;
+  color: black;
+}
+.blogPreview{
+  padding: 5px 20px 5px 15px;
+  margin-top: 12px;
+  border-left: 5px solid rgb(223, 94, 94);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+.blogPreview:hover{
+  box-shadow: 3px 4px 5px 0px rgb(107, 106, 106);
+  padding: 7px 22px 7px 17px;
+  border-left: 8px solid rgb(223, 94, 94);
+  border-radius: 8px;
+}
+
+
+/*Blog view*/
+/* blog details page */
+.blog-title{
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 10px;
+}
+.blog-body{
+  line-height: 1.5;
+}
+.blog-author{
+  color: rgb(85, 88, 88);
+}
+
+.blog-content{
+  margin: 40px 0;
+}
+
+.blog-content button {
+  background: rgb(238, 65, 65);
+  color: #fff;
+  border: 0;
+  font-weight: bold;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.blog-content button:hover{
+  background-color: rgb(238, 99, 99);
+}
+
+/* create page */
+
+/* create new blog form */
+.create {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.create label {
+  text-align: left;
+  display: block;
+}
+.create h2 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 30px;
+}
+.create input, .create textarea, .create select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.create button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
 }
